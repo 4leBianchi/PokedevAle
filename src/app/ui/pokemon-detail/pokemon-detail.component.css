@@ -1,0 +1,34 @@
+div{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+table{
+    width: 50%;
+    background-color: var(--main-bg-color-table);
+    border-collapse: collapse;
+    border-radius: 5px;
+    text-align: center;
+}
+
+tr, td{
+    border: 2px white solid;
+}
+
+.tbcell{
+    background-color: white;
+    border: 4px turquoise solid;
+    border-radius: 5px;
+}
+
+/*.height-weight{
+      
+}
+
+.statistics{
+
+}
+
+.pokedex-entry{
+    text-align: left;
+}*/
