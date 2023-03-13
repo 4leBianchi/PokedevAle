@@ -4,7 +4,7 @@ div{
 }
 
 table{
-    width: var( --main-width);
+    width: 50%;
     background-color: var(--main-bg-color-table);
     border-collapse: collapse;
     border-radius: 5px;

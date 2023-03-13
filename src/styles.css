@@ -10,7 +10,6 @@ html * {
 
 :root{
     --main-color-span: aliceblue;
-    --main-width: 50%;
     --main-bg-color-table: cadetblue;
     --main-border: 4px turquoise solid;
     --main-bg-color-tbcell: white;
