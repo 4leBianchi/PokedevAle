@@ -5,7 +5,7 @@ nav{
 }
 
 span{
-    color: aliceblue;
+    color: var(--main-color-span);
     margin-left: 20px;
     align-items: center;
 }

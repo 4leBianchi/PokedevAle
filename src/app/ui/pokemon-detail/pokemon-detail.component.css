@@ -4,8 +4,8 @@ div{
 }
 
 table{
-    width: 50%;
-    background-color: cadetblue;
+    width: var( --main-width);
+    background-color: var(--main-bg-color-table);
     border-collapse: collapse;
     border-radius: 5px;
     text-align: center;
