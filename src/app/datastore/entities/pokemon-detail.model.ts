@@ -5,6 +5,7 @@ export interface PokemonDetailConstructor {
   height: number;
   weight: number;
   order: number;
+  species: {name: string};
   types: PokemonTypes[];
 }
 
@@ -17,6 +18,7 @@ export class PokemonDetailModel {
   public height: number;
   public weight: number;
   public order: number;
+  public name: string;
   public types: PokemonTypeModel[]=[];
 
   constructor(dataPoke: PokemonDetailConstructor) {
@@ -24,6 +26,7 @@ export class PokemonDetailModel {
     this.height = dataPoke['height'];
     this.weight = dataPoke['weight'];
     this.order = dataPoke['order'];
+    this.name = dataPoke['species']['name'];
 
     for (const type of dataPoke.types) {
         this.types.push(new PokemonTypeModel(type.type))
