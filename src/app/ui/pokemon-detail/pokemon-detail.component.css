@@ -18,6 +18,7 @@ tr, td{
 .tbcell{
     background-color: white;
     border: 4px turquoise solid;
+    border-radius: 5px;
 }
 
 /*.height-weight{
