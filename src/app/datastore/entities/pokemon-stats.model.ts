@@ -13,11 +13,11 @@ export class PokemonStatModel {
     speed!: number;
 
     constructor(){
-        this.hp = 0 //dataPoke['base_stat']['stat']['name'];
-        this.attack = 0 //dataPoke['base_stat']['stat']['name'];
-        this.defense = //dataPoke['base_stat']['stat']['name'];
-        this["special-attack"] = 0 //dataPoke['base_stat']['stat']['name'];
-        this["special-defense"] = 0 //dataPoke['base_stat']['stat']['name'];
-
+        this.hp = 0
+        this.attack = 0
+        this.defense = 0
+        this["special-attack"] = 0
+        this["special-defense"] = 0
+        this.speed = 0
     }
 }

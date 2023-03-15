@@ -18,7 +18,7 @@ interface PokemonTypes {
 
 export class PokemonDetailModel {
   public id: number;
-  public sprites: string;
+  public image: string;
   public height: number;
   public weight: number;
   public order: number;
@@ -28,7 +28,7 @@ export class PokemonDetailModel {
 
   constructor(dataPoke: PokemonDetailConstructor) {
     this.id = dataPoke['id'];
-    this.sprites = dataPoke['sprites']['other']["official-artwork"]['front_default'];
+    this.image = dataPoke['sprites']['other']["official-artwork"]['front_default'];
     this.height = dataPoke['height'];
     this.weight = dataPoke['weight'];
     this.order = dataPoke['order'];
@@ -40,7 +40,6 @@ export class PokemonDetailModel {
     }
 
     for (let stat of dataPoke.stats) {
-      //stat = stat as unknown as PokemonStatConstructor;
       
       if (stat.stat.name == "hp"){
         this.stats.hp=stat.base_stat;
