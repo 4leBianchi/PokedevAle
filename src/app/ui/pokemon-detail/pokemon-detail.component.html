@@ -2,7 +2,11 @@
 <div>
 <table align="center">
     <tr class="basic-info">
-        <td rowspan="3">Immagine</td>
+        <td rowspan="3">
+            <table class="tbcell">
+                <img src="{{pokemon?.sprites}}" class="img">
+            </table>
+        </td>
         <td>
             <table class="tbcell">{{pokemon?.name}}</table>
         </td>
@@ -19,10 +23,23 @@
         </td>
     </tr>
     <tr class="statistics">
-        <td colspan="2">statistics</td>
+        <td colspan="2">
+            <table class="tbcell">Statistiche
+                <div>PS: {{pokemon?.stats?.hp}}</div>
+                <div>Attacco: {{pokemon?.stats?.attack}}</div>
+                <div>Difesa: {{pokemon?.stats?.defense}}</div>
+                <div>Att.Sp: {{pokemon?.stats?.['special-attack']}}</div>
+                <div>Def.Sp: {{pokemon?.stats?.['special-defense']}}</div>
+                <div>Velocità: {{pokemon?.stats?.speed}}</div>
+            </table>
+        </td>
     </tr>
     <tr class="type">
-        <td colspan="3">type</td>
+        <td colspan="3">Tipo
+            <div *ngFor="let type of pokemon?.types">
+                {{type.name}}
+            </div>
+        </td>
     </tr>
     <tr class="pokedex-entry">
         <td colspan="3">pokedex entry</td>
