@@ -11,6 +11,12 @@ table{
     text-align: center;
 }
 
+img{
+    /*size: var(--main-img-size);*/
+    width: 96px; 
+    height: 96px;
+}
+
 tr, td{
     border: 2px white solid;
 }
