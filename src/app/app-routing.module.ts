@@ -4,8 +4,7 @@ import { PokemonDetailComponent } from './ui/pokemon-detail/pokemon-detail.compo
 import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 
 const routes: Routes = [
-  {path: '', component: PokemonDetailComponent},
-  {path: '', component: NavHeaderComponent},
+  {path: 'dettaglio/:idPokemon', component: PokemonDetailComponent},
 ];
 
 @NgModule({

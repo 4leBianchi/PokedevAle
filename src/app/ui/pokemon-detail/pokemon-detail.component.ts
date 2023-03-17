@@ -14,7 +14,7 @@ export class PokemonDetailComponent implements OnInit{
   constructor (private pokeapiService: PokeapiService) {};
 
   ngOnInit(): void {
-    this.pokeapiService.getPokemonApi().subscribe(res=>{
+    this.pokeapiService.getPokemonApi("pikachu").subscribe(res=>{
       this.pokemon=new PokemonDetailModel(res as PokemonDetailConstructor);
       console.log(this.pokemon)
     });

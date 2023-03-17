@@ -1,10 +1,6 @@
-div{
-    padding-left: 60px;
-    padding-right: 60px;
-}
 
 table{
-    width: 50%;
+    width: 60%;
     background-color: var(--main-bg-color-table);
     border-collapse: collapse;
     border-radius: 5px;
@@ -12,28 +8,25 @@ table{
 }
 
 img{
-    /*size: var(--main-img-size);*/
-    width: 96px; 
-    height: 96px;
+    width: 210px; 
+    height: 210px;
 }
 
-tr, td{
-    border: 2px white solid;
+.row {
+    --bs-gutter-x: 4px;
 }
 
-.tbcell{
+.titol-info{
+    text-decoration: capitalize;
+    background-color: #BEE3DB;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.info{
     background-color: white;
-    border: 4px turquoise solid;
+    border-radius: 5px;
+    /*width: auto;
+    /*margin-left: 0px;
+    margin-right: 0px;*/
 }
-
-/*.height-weight{
-      
-}
-
-.statistics{
-
-}
-
-.pokedex-entry{
-    text-align: left;
-}*/
