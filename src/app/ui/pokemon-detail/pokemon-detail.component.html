@@ -1,48 +1,122 @@
- 
+<br>
 <div>
-<table align="center">
-    <tr class="basic-info">
-        <td rowspan="3">
-            <table class="tbcell">
-                <img src="{{pokemon?.image}}" class="img">
-            </table>
-        </td>
-        <td>
-            <table class="tbcell">{{pokemon?.name}}</table>
-        </td>
-        <td>
-            <table class="tbcell">#{{pokemon?.id}}</table>
-        </td>
-    </tr>
-    <tr class="height-weight">
-        <td>
-            <table class="tbcell">Altezza {{pokemon?.height}}</table>
-        </td>
-        <td>
-            <table class="tbcell">Peso {{pokemon?.weight}}</table>
-        </td>
-    </tr>
-    <tr class="statistics">
-        <td colspan="2">
-            <table class="tbcell">Statistiche
-                <div>PS: {{pokemon?.stats?.hp}}</div>
-                <div>Attacco: {{pokemon?.stats?.attack}}</div>
-                <div>Difesa: {{pokemon?.stats?.defense}}</div>
-                <div>Att.Sp: {{pokemon?.stats?.['special-attack']}}</div>
-                <div>Def.Sp: {{pokemon?.stats?.['special-defense']}}</div>
-                <div>Velocità: {{pokemon?.stats?.speed}}</div>
-            </table>
-        </td>
-    </tr>
-    <tr class="type">
-        <td colspan="3">Tipo
-            <div *ngFor="let type of pokemon?.types">
-                {{type.name}}
-            </div>
-        </td>
-    </tr>
-    <tr class="pokedex-entry">
-        <td colspan="3">pokedex entry</td>
-    </tr>
-  </table>
+    <table align="center">
+        <tr>
+            <td rowspan="3">
+                <div class="titol-info">
+                    <div class="info">
+                        <img src="{{pokemon?.image}}" class="img">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="row align-center m-0 p-0">
+                    <div class="col-6 text-start text-capitalize">
+                        <div class="titol-info">
+                            <div class="info">
+                                {{pokemon?.name}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 text-end">
+                        <div class="titol-info">
+                            <div class="info">                                
+                                #{{pokemon?.id}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="row m-0 p-0 text-capitalize">
+                    <div class="col-6 text-center">
+                        <div class="titol-info">
+                            altezza
+                            <div class="info">
+                                {{pokemon?.height}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <div class="titol-info">
+                            peso
+                            <div class="info">
+                                {{pokemon?.weight}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-capitalize row">
+                <div class="titol-info col-12 ">
+                    statistiche base
+                    <div class="row m-0 p-0">
+                        <div class="col-2 p-0">
+                            PS
+                            <div class="info">
+                                {{pokemon?.stats?.hp}}
+                            </div>
+                        </div>
+                        <div class="col-2 p-0">
+                            Attacco
+                            <div class="info">
+                                {{pokemon?.stats?.attack}}
+                            </div>
+                        </div>
+                        <div class="col-2 p-0">
+                            Difesa
+                            <div class="info">
+                                {{pokemon?.stats?.defense}}
+                            </div>
+                        </div>
+                        <div class="col-2 p-0">
+                            Att.Sp
+                            <div class="info">
+                                {{pokemon?.stats?.['special-attack']}}
+                            </div>
+                        </div>
+                        <div class="col-2 p-0">
+                            Def.Sp
+                            <div class="info">
+                                {{pokemon?.stats?.['special-defense']}}
+                            </div>
+                        </div>
+                        <div class="col-2 p-0">
+                            Velocità
+                            <div class="info">
+                                {{pokemon?.stats?.speed}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div class="titol-info">
+                    Tipo
+                    <div class="info">
+                        <div *ngFor="let type of pokemon?.types"
+                        class="badge rounded-pill text-bg-primary info">
+                            {{type.name}}
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-capitalize">
+                <div class="titol-info text-start">
+                    pokedex entry
+                    <div class="info">
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
 </div>
