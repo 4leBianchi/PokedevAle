@@ -8,7 +8,7 @@ export class PokeapiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPokemonApi(idPokemon:string){
-    return this.httpClient.get('https://pokeapi.co/api/v2/pokemon/'+idPokemon);
+  getPokemonApi(id:number){
+    return this.httpClient.get('https://pokeapi.co/api/v2/pokemon/'+id);
   }
 }
