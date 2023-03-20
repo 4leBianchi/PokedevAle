@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { PokemonDetailComponent } from './ui/pokemon-detail/pokemon-detail.component';
 import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonDetailComponent,
     NavHeaderComponent,
+    PokemonHomeComponent,
   ],
   imports: [
     CommonModule,
