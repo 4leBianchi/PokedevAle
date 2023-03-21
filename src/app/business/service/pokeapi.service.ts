@@ -8,7 +8,11 @@ export class PokeapiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPokemonApi(id:number){
-    return this.httpClient.get('https://pokeapi.co/api/v2/pokemon/'+id);
+  getPokemonApi(name:String){
+    return this.httpClient.get('https://pokeapi.co/api/v2/pokemon/'+name);
+  }
+
+  getPokemonApiList(){
+    return this.httpClient.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=7");
   }
 }

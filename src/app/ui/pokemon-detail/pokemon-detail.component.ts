@@ -20,10 +20,10 @@ export class PokemonDetailComponent implements OnInit{
     ) {};
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('idPokemon'));
+    const name = this.route.snapshot.paramMap.get('namePokemon') || "";
 
-    this.pokeapiService.getPokemonApi(id)
-    .subscribe(res=>{this.pokemon=new PokemonDetailModel(res as PokemonDetailConstructor);
+    this.pokeapiService.getPokemonApi(name).subscribe(res =>{
+      this.pokemon=new PokemonDetailModel(res as PokemonDetailConstructor);
 
       console.log(this.pokemon)
     });

@@ -5,7 +5,7 @@ import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
 import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 
 const routes: Routes = [
-  {path: 'dettaglio/:idPokemon', component: PokemonDetailComponent},
+  {path: 'dettaglio/:namePokemon', component: PokemonDetailComponent},
   {path: '', redirectTo:'pokeHome', pathMatch:'full'},
   {path: 'pokeHome', component: PokemonHomeComponent}
 ];
