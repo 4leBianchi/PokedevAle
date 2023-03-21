@@ -1,6 +1,6 @@
 
 table{
-    width: 40%;
+    width: 50%;
     background-color: var(--main-bg-color-table);
     border-collapse: collapse;
     border-radius: 5px;
@@ -13,7 +13,7 @@ img{
 }
 
 .row {
-    --bs-gutter-x: 4px;
+    --bs-gutter-x: 0px;
 }
 
 .titol-info{

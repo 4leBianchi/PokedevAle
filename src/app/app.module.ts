@@ -9,6 +9,7 @@ import { PokemonDetailComponent } from './ui/pokemon-detail/pokemon-detail.compo
 import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
+import { PokemonRowComponent } from './ui/pokemon-row/pokemon-row.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
     PokemonDetailComponent,
     NavHeaderComponent,
     PokemonHomeComponent,
+    PokemonRowComponent,
   ],
   imports: [
     CommonModule,

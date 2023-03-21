@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PokemonHomeComponent implements OnInit{
   public pokehome: PokemonDetailModel |null = null;
-  //public pokemon: PokemonDetailHome |null = null;
+  public pokemon: PokemonDetailHome |null = null;
 
   constructor (
     private pokeapiService: PokeapiService,
@@ -19,19 +19,9 @@ export class PokemonHomeComponent implements OnInit{
   ){};
 
   ngOnInit(): void {
-  //  this.getPokemonApiList();
-  //}
-  
-  //getPokemonApiList(): void {
     this.pokeapiService.getPokemonApiList().subscribe((risposta)=>{
 
       console.log(risposta)
     });
-
-    //const name = String(this.route.snapshot.paramMap.get('namePokemon'));
-
-    //this.pokeapiService.getPokemonApi(name).subscribe(respond =>{
-      //this.pokehome=new PokemonDetailModel(respond as PokemonDetailConstructor);
-    //})
   }
 }

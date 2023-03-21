@@ -13,5 +13,29 @@ html * {
     --main-bg-color-table: cadetblue;
     --main-border: 4px turquoise solid;
     --main-bg-color-tbcell: white;
-    /*--main-img-size: width: 96px, height: 96px;*/
+}
+
+section{
+    margin: auto;
+    width: 90%;
+    background-color: var(--main-bg-color-table);
+    border-radius: 5px;
+    text-align: center;
+    padding: 3px;
+}
+
+.titol-info{
+    text-decoration: capitalize;
+    background-color: #BEE3DB;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.info{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.row{
+    --bs-gutter-x: 0;
 }
