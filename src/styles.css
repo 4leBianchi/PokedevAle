@@ -21,14 +21,14 @@ section{
     background-color: var(--main-bg-color-table);
     border-radius: 5px;
     text-align: center;
-    padding: 3px;
+    padding: 2px;
 }
 
 .titol-info{
     text-decoration: capitalize;
     background-color: #BEE3DB;
     border-radius: 5px;
-    padding: 4px;
+    padding: 2px;
 }
 
 .info{

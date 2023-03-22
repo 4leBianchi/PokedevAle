@@ -23,7 +23,7 @@ export class PokemonDetailComponent implements OnInit{
     const name = this.route.snapshot.paramMap.get('namePokemon') || "";
 
     this.pokeapiService.getPokemonApi(name).subscribe(res =>{
-      this.pokemon=new PokemonDetailModel(res as PokemonDetailConstructor);
+      this.pokemon = res;
 
       console.log(this.pokemon)
     });

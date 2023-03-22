@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PokemonDetailModel } from 'src/app/datastore/entities/pokemon-detail.model';
 
 @Component({
   selector: 'app-pokemon-row',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pokemon-row.component.css']
 })
 export class PokemonRowComponent {
-
+  @Input() pokemon!: PokemonDetailModel;
 }

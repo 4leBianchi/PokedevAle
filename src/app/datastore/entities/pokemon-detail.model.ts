@@ -3,7 +3,10 @@ import { PokemonTypeConstructor, PokemonTypeModel } from "./pokemon-type.model";
 
 export interface PokemonDetailConstructor {
   id: number;
-  sprites: {other: {"official-artwork": {front_default: string}}}; 
+  sprites: {
+    front_default: string,
+    other: {"official-artwork": {front_default: string}}
+  };
   height: number;
   weight: number;
   order: number;
@@ -19,6 +22,7 @@ interface PokemonTypes {
 export class PokemonDetailModel {
   public id: number;
   public image: string;
+  public sprite: string;
   public height: number;
   public weight: number;
   public order: number;
@@ -29,6 +33,7 @@ export class PokemonDetailModel {
   constructor(dataPoke: PokemonDetailConstructor) {
     this.id = dataPoke['id'];
     this.image = dataPoke['sprites']['other']["official-artwork"]['front_default'];
+    this.sprite = dataPoke['sprites']['front_default'];
     this.height = dataPoke['height'];
     this.weight = dataPoke['weight'];
     this.order = dataPoke['order'];

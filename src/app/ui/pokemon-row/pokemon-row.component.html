@@ -1,34 +1,37 @@
 <section>
-    <div class="row">
-      <div class="titol-info col-1 pr-4">
-        <div class="info">No.</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Pic</div>
-      </div>
-      <div class="titol-info col-2">
-        <div class="info">Name</div>
-      </div>
-      <div class="titol-info col-2">
-        <div class="info">Type</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">PS</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Att</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Dif</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Att.Sp</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Dif.Sp</div>
-      </div>
-      <div class="titol-info col-1">
-        <div class="info">Vel</div>
+  <div class="row">
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{ pokemon.id }}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">
+        <img src="{{ pokemon.sprite }}" />
       </div>
     </div>
-  </section>
+    <div class="titol-info col-2 border border-2 border-dark">
+      <div class="info">{{ pokemon.name }}</div>
+    </div>
+    <div class="titol-info col-2 border border-2 border-dark">
+      <div *ngFor="let type of pokemon.types" class="info">{{ type.name }}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{ pokemon.stats.hp }}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{ pokemon.stats.attack }}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{ pokemon.stats.defense }}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{pokemon?.stats?.['special-attack']}}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{pokemon?.stats?.['special-defense']}}</div>
+    </div>
+    <div class="titol-info col-1 border border-2 border-dark">
+      <div class="info">{{ pokemon.stats.speed }}</div>
+    </div>
+  </div>
+</section>
+<br />
