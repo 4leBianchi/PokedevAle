@@ -3,7 +3,7 @@
   <table align="center">
     <tr>
       <td rowspan="3">
-        <div class="titol-info border border-2 border-dark">
+        <div class="titol-info">
           <div class="info">
             <img src="{{ pokemon?.image }}" class="img" />
           </div>
@@ -12,14 +12,14 @@
       <td>
         <div class="row align-center m-0 p-0">
           <div class="col-6 text-start text-capitalize">
-            <div class="titol-info border border-2 border-dark">
+            <div class="titol-info border border-2">
               <div class="info">
                 {{ pokemon?.name }}
               </div>
             </div>
           </div>
           <div class="col-6 text-end">
-            <div class="titol-info border border-2 border-dark">
+            <div class="titol-info border border-2">
               <div class="info">#{{ pokemon?.id }}</div>
             </div>
           </div>
@@ -33,7 +33,7 @@
             <div class="titol-info">
               altezza
               <div class="info">
-                {{ pokemon?.height }}
+                {{ pokemon?.height | metric}}
               </div>
             </div>
           </div>

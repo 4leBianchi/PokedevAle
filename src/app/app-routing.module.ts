@@ -5,13 +5,13 @@ import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
 import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 
 const routes: Routes = [
-  {path: 'dettaglio/:namePokemon', component: PokemonDetailComponent},
-  {path: '', redirectTo:'pokeHome', pathMatch:'full'},
-  {path: 'pokeHome', component: PokemonHomeComponent}
+  { path: 'dettaglio/:namePokemon', component: PokemonDetailComponent },
+  { path: '', redirectTo: 'pokeHome', pathMatch: 'full' },
+  { path: 'pokeHome', component: PokemonHomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -10,6 +10,7 @@ import { NavHeaderComponent } from './ui/nav-header/nav-header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
 import { PokemonRowComponent } from './ui/pokemon-row/pokemon-row.component';
+import { MetricPipe } from './business/pipe/metric.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PokemonRowComponent } from './ui/pokemon-row/pokemon-row.component';
     NavHeaderComponent,
     PokemonHomeComponent,
     PokemonRowComponent,
+    MetricPipe,
   ],
   imports: [
     CommonModule,
