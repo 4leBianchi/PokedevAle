@@ -1,22 +1,26 @@
 <br />
 <section>
   <div class="row">
-    <div class="titol-info col-1 border border-2 border-dark">No.</div>
-    <div class="titol-info col-1 border border-2 border-dark">Pic</div>
-    <div class="titol-info col-2 border border-2 border-dark">Name</div>
-    <div class="titol-info col-2 border border-2 border-dark">Type</div>
+    <div class="titol-info col-1">No.</div>
+    <div class="titol-info col-1">Pic</div>
+    <div class="titol-info col-2">Name</div>
+    <div class="titol-info col-2">Type</div>
     <div class="col-6">
-      <div class="titol-info border border-2 border-dark">Stats</div>
+      <div class="titol-info">Stats</div>
+      <p></p>
       <div class="d-flex">
-        <div class="titol-info col-2 border border-2 border-dark">PS</div>
-        <div class="titol-info col-2 border border-2 border-dark">Att</div>
-        <div class="titol-info col-2 border border-2 border-dark">Dif</div>
-        <div class="titol-info col-2 border border-2 border-dark">Att.Sp</div>
-        <div class="titol-info col-2 border border-2 border-dark">Dif.Sp</div>
-        <div class="titol-info col-2 border border-2 border-dark">Vel</div>
+        <div class="titol-info col-2">PS</div>
+        <div class="titol-info col-2">Att</div>
+        <div class="titol-info col-2">Dif</div>
+        <div class="titol-info col-2">Att.Sp</div>
+        <div class="titol-info col-2">Dif.Sp</div>
+        <div class="titol-info col-2">Vel</div>
       </div>
     </div>
   </div>
 </section>
 <br />
-<app-pokemon-row *ngFor="let pokemon of pokemonlist" [pokemon]="pokemon"></app-pokemon-row>
+<app-pokemon-row
+  *ngFor="let pokemon of pokemonlist"
+  [pokemon]="pokemon"
+></app-pokemon-row>

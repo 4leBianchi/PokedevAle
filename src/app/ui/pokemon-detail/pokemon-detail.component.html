@@ -26,22 +26,23 @@
         </div>
       </td>
     </tr>
+
     <tr>
       <td>
         <div class="row m-0 p-0 text-capitalize">
           <div class="col-6 text-center">
             <div class="titol-info">
               altezza
-              <div class="info">
-                {{ pokemon?.height | metric}}
+              <div class="info text-lowercase">
+                {{ pokemon?.height | metric | number : "1.1" }}m
               </div>
             </div>
           </div>
           <div class="col-6 text-center">
             <div class="titol-info">
               peso
-              <div class="info">
-                {{ pokemon?.weight }}
+              <div class="info text-lowercase">
+                {{ pokemon?.weight | weight | number : "1.1" }}kg
               </div>
             </div>
           </div>
