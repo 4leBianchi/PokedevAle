@@ -11,7 +11,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PokemonHomeComponent } from './ui/pokemon-home/pokemon-home.component';
 import { PokemonRowComponent } from './ui/pokemon-row/pokemon-row.component';
 import { MetricPipe } from './business/pipe/metric.pipe';
-import { WeightPipe } from './business/pipe/weight.pipe';
+import { WeightPipe } from './business/pipe/mass.pipe';
+import { FeetsInchesPipe } from './business/pipe/feets-inches.pipe';
+import { LbsPipe } from './business/pipe/lbs.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { WeightPipe } from './business/pipe/weight.pipe';
     PokemonRowComponent,
     MetricPipe,
     WeightPipe,
+    FeetsInchesPipe,
+    LbsPipe,
   ],
   imports: [
     CommonModule,

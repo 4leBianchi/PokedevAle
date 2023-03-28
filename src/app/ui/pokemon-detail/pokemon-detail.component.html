@@ -34,7 +34,8 @@
             <div class="titol-info">
               altezza
               <div class="info text-lowercase">
-                {{ pokemon?.height | metric | number : "1.1" }}m
+                {{ pokemon?.height | feetsInches }}
+                {{ pokemon?.height | metric | number : "1.2" }} m
               </div>
             </div>
           </div>
@@ -42,7 +43,8 @@
             <div class="titol-info">
               peso
               <div class="info text-lowercase">
-                {{ pokemon?.weight | weight | number : "1.1" }}kg
+                {{ pokemon?.weight | lbs }} lbs.
+                {{ pokemon?.weight | mass | number : "1.1" }} kg
               </div>
             </div>
           </div>

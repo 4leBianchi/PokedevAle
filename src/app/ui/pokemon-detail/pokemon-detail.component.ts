@@ -23,7 +23,7 @@ export class PokemonDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const name = this.route.snapshot.paramMap.get('namePokemon') || '';
+    const name = this.route.snapshot.paramMap.get('namePokemon')?.toLocaleLowerCase() || '';
 
     this.pokeapiService.getPokemonApi(name).subscribe((res) => {
       this.pokemon = res;

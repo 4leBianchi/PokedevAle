@@ -1,4 +1,4 @@
-import { WeightPipe } from './weight.pipe';
+import { WeightPipe } from './mass.pipe';
 
 describe('WeightPipe', () => {
   it('create an instance', () => {
