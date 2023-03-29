@@ -32,6 +32,7 @@ export class PokemonDetailModel {
   public stats: PokemonStatModel;
   public name: string;
   public types: PokemonTypeModel[] = [];
+  public pokedex: string;
 
   constructor(dataPoke: PokemonDetailConstructor) {
     this.id = dataPoke['id'];
@@ -43,6 +44,7 @@ export class PokemonDetailModel {
     this.order = dataPoke['order'];
     this.name = dataPoke['species']['name'];
     this.stats = new PokemonStatModel();
+    this.pokedex = '';
 
     for (const type of dataPoke.types) {
       this.types.push(new PokemonTypeModel(type.type));

@@ -8,6 +8,7 @@ import {
 import { ActivatedRoute } from '@angular/router';
 import { Location, UpperCasePipe } from '@angular/common';
 import { PokemonEntryModel } from 'src/app/datastore/entities/pokemon-entry.model';
+import { merge, mergeMap, zip } from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -16,12 +17,10 @@ import { PokemonEntryModel } from 'src/app/datastore/entities/pokemon-entry.mode
 })
 export class PokemonDetailComponent implements OnInit {
   public pokemon: PokemonDetailModel | null = null;
-  public pokedex: PokemonEntryModel | null = null;
 
   constructor(
     private pokeapiService: PokeapiService,
-    private route: ActivatedRoute,
-    private location: Location
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -29,16 +28,15 @@ export class PokemonDetailComponent implements OnInit {
       this.route.snapshot.paramMap.get('namePokemon')?.toLocaleLowerCase() ||
       '';
 
-    this.pokeapiService.getPokemonApi(name).subscribe((res) => {
-      this.pokemon = res;
+    const pokeDetail = this.pokeapiService.getPokemonApi(name);
 
-      console.log(this.pokemon);
-    });
+    const pokeEntry = this.pokeapiService.getPokemonEntry(name);
 
-    this.pokeapiService.getPokemonEntry(name).subscribe((res) => {
-      this.pokedex = res;
-
-      console.log(this.pokedex);
-    });
+    zip(pokeDetail, pokeEntry).subscribe(
+      ([pokemonDetailModel, pokemonEntryModel]) => {
+        this.pokemon = pokemonDetailModel;
+        this.pokemon.pokedex = pokemonEntryModel.pokedex;
+      }
+    );
   }
 }

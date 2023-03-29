@@ -13,3 +13,11 @@
 .clickable{
     cursor: pointer;
 }
+
+section{
+    margin-bottom: 8px;
+}
+
+img{
+    height: 70px;
+}
