@@ -10,12 +10,9 @@ import { PokemonDetailModel } from 'src/app/datastore/entities/pokemon-detail.mo
 export class PokemonRowComponent {
   @Input() pokemon!: PokemonDetailModel;
 
-  constructor(protected router: Router){
-    
-  }
+  constructor(protected router: Router) {}
 
-  GoToDetail(name:String) {
-    this.router.navigateByUrl("/dettaglio/"+name)
-    console.log('hello world');
+  GoToDetail(name: String) {
+    this.router.navigateByUrl('/dettaglio/' + name);
   }
 }
