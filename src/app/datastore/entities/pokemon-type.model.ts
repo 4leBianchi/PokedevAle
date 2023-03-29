@@ -3,9 +3,9 @@ export interface PokemonTypeConstructor {
 }
 
 export class PokemonTypeModel {
-    name: string;
+  name: string;
 
-    constructor(dataPoke: PokemonTypeConstructor){
-        this.name = dataPoke['name'];
-    }
+  constructor(dataPoke: PokemonTypeConstructor) {
+    this.name = dataPoke['name'];
+  }
 }

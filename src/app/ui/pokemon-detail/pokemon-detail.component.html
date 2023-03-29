@@ -43,7 +43,7 @@
             <div class="titol-info">
               peso
               <div class="info text-lowercase">
-                {{ pokemon?.weight | lbs }} lbs.
+                {{ pokemon?.weight | lbs }}lbs
                 {{ pokemon?.weight | mass | number : "1.1" }} kg
               </div>
             </div>
@@ -112,10 +112,12 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3" class="text-capitalize">
+      <td colspan="3">
         <div class="titol-info text-start">
           pokedex entry
-          <div class="info"></div>
+          <div class="info">
+            {{ pokedex?.pokedex }}
+          </div>
         </div>
       </td>
     </tr>

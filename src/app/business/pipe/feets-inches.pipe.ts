@@ -29,7 +29,6 @@ export class FeetsInchesPipe implements PipeTransform {
     result_feet = Math.trunc(result_feet);
 
     result_inche = result_inche % divider_feet;
-    console.log("inch",result_inche)
 
     return result_feet + "'" + result_inche.toFixed(0) + '" ';
   }

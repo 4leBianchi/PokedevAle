@@ -7,6 +7,7 @@ import {
 } from 'src/app/datastore/entities/pokemon-detail.model';
 import { ActivatedRoute } from '@angular/router';
 import { Location, UpperCasePipe } from '@angular/common';
+import { PokemonEntryModel } from 'src/app/datastore/entities/pokemon-entry.model';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -15,6 +16,7 @@ import { Location, UpperCasePipe } from '@angular/common';
 })
 export class PokemonDetailComponent implements OnInit {
   public pokemon: PokemonDetailModel | null = null;
+  public pokedex: PokemonEntryModel | null = null;
 
   constructor(
     private pokeapiService: PokeapiService,
@@ -23,12 +25,20 @@ export class PokemonDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const name = this.route.snapshot.paramMap.get('namePokemon')?.toLocaleLowerCase() || '';
+    const name =
+      this.route.snapshot.paramMap.get('namePokemon')?.toLocaleLowerCase() ||
+      '';
 
     this.pokeapiService.getPokemonApi(name).subscribe((res) => {
       this.pokemon = res;
 
       console.log(this.pokemon);
+    });
+
+    this.pokeapiService.getPokemonEntry(name).subscribe((res) => {
+      this.pokedex = res;
+
+      console.log(this.pokedex);
     });
   }
 }
