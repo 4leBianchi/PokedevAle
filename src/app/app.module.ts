@@ -14,6 +14,7 @@ import { MetricPipe } from './business/pipe/metric.pipe';
 import { WeightPipe } from './business/pipe/mass.pipe';
 import { FeetsInchesPipe } from './business/pipe/feets-inches.pipe';
 import { LbsPipe } from './business/pipe/lbs.pipe';
+import { PokemonHeaderRowComponent } from './ui/pokemon-header-row/pokemon-header-row.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LbsPipe } from './business/pipe/lbs.pipe';
     WeightPipe,
     FeetsInchesPipe,
     LbsPipe,
+    PokemonHeaderRowComponent,
   ],
   imports: [
     CommonModule,

@@ -24,15 +24,10 @@ export class PokemonHomeComponent implements OnInit {
     this.pokeapiService.getPokemonApiList().subscribe((res) => {
       let risposta = res as unknown as PokemonListConstructor;
       for (const name of risposta.results) {
-        console.log(name);
-
         this.pokeapiService.getPokemonApi(name.name).subscribe((res) => {
           this.pokemonlist.push(res);
-
-          console.log(this.pokemonlist);
         });
       }
-      console.log(risposta.results);
     });
   }
 }
