@@ -1,0 +1,18 @@
+.col-2 {
+    width: 16%;
+    margin: auto;
+}
+
+.col-1 {
+    width: 8%;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 2px;
+}
+
+section{
+    margin-top: 15px;
+    margin-bottom: 8px;
+}

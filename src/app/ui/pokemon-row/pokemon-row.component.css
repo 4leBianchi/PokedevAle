@@ -1,0 +1,21 @@
+.col-2 {
+    width: 16%;
+    margin: auto;
+}
+
+.col-1 {
+    width: 8%;
+    margin: auto;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+section{
+    margin-bottom: 8px;
+}
+
+img{
+    height: 70px;
+}

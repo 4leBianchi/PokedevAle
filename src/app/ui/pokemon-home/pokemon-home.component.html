@@ -1,0 +1,9 @@
+<app-pokemon-header-row> </app-pokemon-header-row>
+<app-pokemon-row
+  *ngFor="let pokemon of pokemonlist"
+  [pokemon]="pokemon"
+></app-pokemon-row>
+<div class="space-button">
+  <button *ngIf="hidebutton"(click)="decreasePokemon()">Previous</button>
+  <button (click)="increasePokemon()">Next</button>
+</div>
