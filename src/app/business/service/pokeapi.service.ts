@@ -60,7 +60,6 @@ export class PokeapiService {
   nextPokemon() {
     this.OffSetPokemon = this.OffSetPokemon + 6;
   }
-
   previousPokemon() {
     this.OffSetPokemon = this.OffSetPokemon - 6;
   }
