@@ -14,6 +14,7 @@ import { PokemonListConstructor } from 'src/app/datastore/entities/pokemon-list.
 })
 export class PokemonHomeComponent implements OnInit {
   public pokemonlist: PokemonDetailModel[] = [];
+  public hidebutton: boolean = false;
 
   constructor(
     private pokeapiService: PokeapiService,
@@ -21,6 +22,11 @@ export class PokemonHomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getPokemon();
+  }
+  getPokemon() {
+    this.pokemonlist = [];
+    this.hidebutton = !this.pokeapiService.OffSetController();
     this.pokeapiService.getPokemonApiList().subscribe((res) => {
       let risposta = res as unknown as PokemonListConstructor;
       for (const name of risposta.results) {
@@ -29,5 +35,15 @@ export class PokemonHomeComponent implements OnInit {
         });
       }
     });
+  }
+  increasePokemon() {
+    this.pokeapiService.nextPokemon();
+    this.getPokemon();
+    console.log(this.pokeapiService.nextPokemon);
+  }
+  decreasePokemon() {
+    this.pokeapiService.previousPokemon();
+    this.getPokemon();
+    console.log(this.pokeapiService.previousPokemon);
   }
 }

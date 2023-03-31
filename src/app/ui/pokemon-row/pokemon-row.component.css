@@ -1,11 +1,9 @@
 .col-2 {
-    flex: 0 0 auto;
     width: 16%;
     margin: auto;
 }
 
 .col-1 {
-    flex: 0 0 auto;
     width: 8%;
     margin: auto;
 }

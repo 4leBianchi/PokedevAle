@@ -6,8 +6,6 @@ import {
   PokemonDetailModel,
 } from 'src/app/datastore/entities/pokemon-detail.model';
 import { ActivatedRoute } from '@angular/router';
-import { Location, UpperCasePipe } from '@angular/common';
-import { PokemonEntryModel } from 'src/app/datastore/entities/pokemon-entry.model';
 import { merge, mergeMap, zip } from 'rxjs';
 
 @Component({
@@ -29,7 +27,6 @@ export class PokemonDetailComponent implements OnInit {
       '';
 
     const pokeDetail = this.pokeapiService.getPokemonApi(name);
-
     const pokeEntry = this.pokeapiService.getPokemonEntry(name);
 
     zip(pokeDetail, pokeEntry).subscribe(
