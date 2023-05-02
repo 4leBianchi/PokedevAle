@@ -22,9 +22,9 @@ export class PokemonHomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getPokemon();
+    this.getPokemons();
   }
-  getPokemon() {
+  getPokemons() {
     this.pokemonlist = [];
     this.hidebutton = !this.pokeapiService.OffSetController();
     this.pokeapiService.getPokemonApiList().subscribe((res) => {
@@ -38,12 +38,10 @@ export class PokemonHomeComponent implements OnInit {
   }
   increasePokemon() {
     this.pokeapiService.nextPokemon();
-    this.getPokemon();
-    console.log(this.pokeapiService.nextPokemon);
+    this.getPokemons();
   }
   decreasePokemon() {
     this.pokeapiService.previousPokemon();
-    this.getPokemon();
-    console.log(this.pokeapiService.previousPokemon);
+    this.getPokemons();
   }
 }
