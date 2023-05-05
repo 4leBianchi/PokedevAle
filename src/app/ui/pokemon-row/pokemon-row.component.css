@@ -18,4 +18,11 @@ section{
 
 img{
     height: 70px;
+    max-width: 100%;
+    block-size: auto;
+}
+
+.spanName{
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

@@ -15,8 +15,9 @@ import {
   providedIn: 'root',
 })
 export class PokeapiService {
-  public NumeroPokemon: number = 6;
-  public OffSetPokemon: number = 0;
+  private offsetBase: number = 6;
+  private NumeroPokemon: number = this.offsetBase;
+  private OffSetPokemon: number = 0;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -58,9 +59,9 @@ export class PokeapiService {
   }
 
   nextPokemon() {
-    this.OffSetPokemon = this.OffSetPokemon + 6;
+    this.OffSetPokemon = this.OffSetPokemon + this.offsetBase;
   }
   previousPokemon() {
-    this.OffSetPokemon = this.OffSetPokemon - 6;
+    this.OffSetPokemon = this.OffSetPokemon - this.offsetBase;
   }
 }
